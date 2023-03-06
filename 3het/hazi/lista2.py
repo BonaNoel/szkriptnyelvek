@@ -22,18 +22,19 @@
 def remove_adjacent(nums):
     new_li = []
     for e in nums:
-        if new_li.count(e):
-
+        if not(new_li.count(e)):
             new_li.append(e)
-    return
+
+    return new_li
 
 
 # E.
 # Bemenet: két lista, mindkettőben az elemek növekvő sorrendbe rendezve.
 # Kimenet: egy összefésült lista, melyben az elemek rendezve szerepelnek.
 def list_merge(list1, list2):
-    # TODO...
-    return
+    result = list1[:] + list2[:]
+    result.sort()
+    return result
 
 
 # Egy egyszerű teszt fv. Kiírja az egyes fv.-ek visszaadott értékét, ill.

@@ -2,13 +2,14 @@
 
 
 def is_palindrome(s):
-    if len(s) < 2:
-        return True
+    i = 0
+    while i < len(s):
+        if s[i] != s[-(i + 1)]:
+            return False
 
-    if s[0] != s[-1]:
-        return False
-    else:
-        return is_palindrome(s[1:-1])
+        i += 1
+
+    return True
 
 
 def main():
@@ -20,6 +21,7 @@ def main():
     print(f"Az {s} szó palindrome: {is_palindrome(s)}")
     s = "xyz"
     print(f"Az {s} szó palindrome: {is_palindrome(s)}")
+
 
 
 if __name__ == "__main__":

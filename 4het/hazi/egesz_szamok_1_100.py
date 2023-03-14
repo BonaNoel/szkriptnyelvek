@@ -3,9 +3,7 @@
 
 def main():
 
-    result1 = 0
-    for i in range(101):
-        result1 += i
+    result1 = sum(range(101))
     print("1-100-ig a számok összege: " + str(result1))
 
     result2 = 0

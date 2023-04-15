@@ -1,35 +1,38 @@
 #!/usr/bin/env python3
 
-class Verem:
-    def __init__(self):
-        self.v = []
+from typing import Any
 
-    def ures(self):
+
+class Verem:
+    def __init__(self) -> None:
+        self.v: list[int] = []
+
+    def ures(self) -> bool:
         if len(self.v) == 0:
             return True
         else:
             return False
 
-    def betesz(self, n):
+    def betesz(self, n: int) -> None:
         self.v.append(n)
 
-    def meret(self):
+    def meret(self) -> int:
         return len(self.v)
 
-    def kivesz(self):
+    def kivesz(self) -> Any:
         if self.ures():
             return "None"
         else:
             return self.v.pop(-1)
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.ures():
             return "["
         else:
             return "".join(str(self.v)).replace("]", "").replace(",", "")
 
 
-def main():
+def main() -> None:
     v = Verem()      # üres verem létrehozása
     print(v)         # [
     print(v.ures())  # True

@@ -2,21 +2,21 @@
 
 class Ellipse:
 
-    def __init__(self, lenght, widht):
-        self.lenght = lenght
-        self.widht = widht
+    def __init__(self, lenght: int, widht: int) -> None:
+        self.lenght: int = lenght
+        self.widht: int = widht
 
-    def area(self):
+    def area(self) -> float:
         return self.lenght * self.widht * 3.14
 
-    def perimeter(self):
+    def perimeter(self) -> float:
         return 2 * 3.14 * (self.lenght + self.widht)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Ellipse: lenght = {self.lenght}, widht = {self.widht}"
 
 
-def main():
+def main() -> None:
     e = Ellipse(5, 10)
     print(e)
     print(f"Area: {e.area()}")

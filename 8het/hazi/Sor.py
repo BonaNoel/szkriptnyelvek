@@ -1,34 +1,38 @@
 #!/usr/bin/env python3
-class Sor:
-    def __init__(self):
-        self.s = []
 
-    def ures(self):
+from typing import Any
+
+
+class Sor:
+    def __init__(self) -> None:
+        self.s: list[int] = []
+
+    def ures(self) -> bool:
         if len(self.s) == 0:
             return True
         else:
             return False
 
-    def betesz(self, n):
+    def betesz(self, n: int) -> None:
         self.s.append(n)
 
-    def meret(self):
+    def meret(self) -> int:
         return len(self.s)
 
-    def kivesz(self):
+    def kivesz(self) -> Any:
         if self.ures():
             return "None"
         else:
             return self.s.pop(0)
 
-    def __str__(self):
+    def __str__(self) -> str:
         if self.ures():
             return "[]"
         else:
             return "".join(str(self.s[::-1])).replace(",", "")
 
 
-def main():
+def main() -> None:
     s = Sor()      # üres verem létrehozása
     print(s)         # []
     print(s.ures())  # True

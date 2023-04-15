@@ -2,32 +2,32 @@
 
 class Sphere:
 
-    def __init__(self, radius):
+    def __init__(self, radius: float) -> None:
         self.radius = radius
 
-    def area(self):
+    def area(self) -> float:
         return 4 * 3.14 * self.radius ** 2
 
-    def volume(self):
+    def volume(self) -> float:
         return 4 / 3 * 3.14 * self.radius ** 3
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         return self.radius < other.radius
 
-    def __le__(self, other):
+    def __le__(self, other) -> bool:
         return self.radius <= other.radius
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         return self.radius > other.radius
 
-    def __ge__(self, other):
+    def __ge__(self, other) -> bool:
         return self.radius >= other.radius
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Sphere: radius = {self.radius}"
 
 
-def main():
+def main() -> None:
     s1 = Sphere(5)
     s2 = Sphere(10)
 

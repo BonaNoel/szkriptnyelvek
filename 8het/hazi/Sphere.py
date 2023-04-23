@@ -39,10 +39,10 @@ def main() -> None:
     print(f"s2 area: {s2.area()}")
     print(f"s2 volume: {s2.volume()}")
 
-    print(s1 < s2)
-    print(s1 <= s2)
-    print(s1 > s2)
-    print(s1 >= s2)
+    print(f" s1 < s2: {s1 < s2}")
+    print(f" s1 <= s2: {s1 <= s2}")
+    print(f" s1 > s2: {s1 > s2}")
+    print(f" s1 >= s2: {s1 >= s2}")
 
 
 if __name__ == "__main__":
